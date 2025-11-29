@@ -94,31 +94,23 @@
 
 /* Wrapper agar space-between bekerja lebih rapi */
 .about .vision-mission .boxes {
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* SPACE BETWEEN */
-    align-items: stretch;
-    gap: 60px 40px; /* row-gap, column-gap */
+    justify-content: center; /* center instead of space-between for better responsiveness */
+    gap: 40px 20px; /* row-gap, column-gap */
 }
 
 .about .vision-mission .box {
-    background: var(--bg-light);
-    flex: 1 1 calc(50% - 40px); /* dua kolom, responsif */
+    flex: 1 1 400px; /* min width 400px, grow/shrink */
     max-width: 550px;
-
+    background: var(--bg-light);
     border-radius: 20px;
     padding: 40px 50px;
     box-shadow: 0 10px 20px rgba(0,0,255,0.1);
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease;
-
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .about .vision-mission .box:hover {
@@ -231,17 +223,31 @@
     .about .about-hero-content h1 {
         font-size: 2.4rem;
     }
+    
     .about .about-hero-bg-text {
         font-size: 4.5rem;
     }
+
+    .about .vision-mission .boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about .vision-mission .box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+
     .about .vision-mission {
         padding-top: 80px;
     }
-    .about .vision-mission .box {
-        padding: 35px;
-    }
+
     .about .team-member img {
         width: 200px;
         height: 170px;
     }
 }
+
+
