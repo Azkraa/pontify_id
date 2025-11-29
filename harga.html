@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Pontify.id</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pricing.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/logo.png">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="pricing-page">
+        <section class="pricing-hero">
+            <h1 class="fade-in-up delay-200">Biaya Jasa Pembuatan Website</h1>
+            <p class="fade-in-up delay-400">
+                Mau website kece tapi nggak bikin kantong bolong? Sesuaikan aja sama kebutuhan kamu! Masih bingung? Chill, bisa konsultasi dulu kok!
+            </p>
+            
+            <div class="package-selector-container fade-in-up delay-600">
+                <button class="selector-btn active" data-target="company">Paket Bisnis</button>
+                <button class="selector-btn" data-target="umkm">Paket UMKM</button>
+            </div>
+        </section>
+
+        <section class="pricing-grid active-grid" id="company-grid">
+            
+            <div class="pricing-card card-starter float-on-hover">
+                <div class="card-header starter-header-bg">
+                    <h2>Starter</h2>
+                    <p class="subtitle">Landing Page</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">Rp.</span>
+                    <span class="amount starter-color" data-target="2500000">2,5juta</span>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><span class="check-icon">✅</span> 8 Halaman</li>
+                        <li><span class="check-icon">✅</span> 8 Artikel SEO</li>
+                        <li><span class="check-icon">✅</span> Copywriting</li>
+                        <li><span class="check-icon">✅</span> Desain Premium</li>
+                        <li><span class="check-icon">✅</span> Domain .com</li>
+                        <li><span class="check-icon">✅</span> Gratis Hosting</li>
+                        <li><span class="check-icon">✅</span> Mobile Friendly</li>
+                        <li><span class="check-icon">✅</span> SEO Friendly</li>
+                        <li><span class="check-icon">✅</span> Full Responsive</li>
+                        <li><span class="check-icon">✅</span> Free Maintenance</li>
+                        <li><span class="check-icon">✅</span> Revisi 3x</li>
+                        <li><span class="check-icon">✅</span> Video Panduan</li>
+                    </ul>
+                </div>
+                <button class="cta-button starter-bg pulse-on-hover"
+                onclick="window.location.href='https://wa.me/62895709537878?text=Halo%20Pontify%2C%20Saya%20ingin%20pesan%20website%20dengan%20Paket%20Starter%20dong%21'">
+                    Pesan Sekarang
+                </button>
+                <p class="slot-text">Buruan pesan, slot terbatas!</p>
+            </div>
+
+            <!-- Standar Web Aplikasi -->
+            <div class="pricing-card card-business popular float-on-hover">
+                <span class="tag business-tag-bg">TERBAIK</span>
+                <div class="card-header business-header-bg">
+                    <h2>Standar</h2>
+                    <p class="subtitle">Web Berbasis Aplikasi Standar</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">Rp.</span>
+                    <span class="amount business-color" data-target="5000000">5juta</span>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><span class="check-icon">✅</span> Dashboard Admin & User</li>
+                        <li><span class="check-icon">✅</span> Registrasi & Login User</li>
+                        <li><span class="check-icon">✅</span> Manajemen Konten (CRUD Dasar)</li>
+                        <li><span class="check-icon">✅</span> Integrasi API sederhana (Email, Notifikasi)</li>
+                        <li><span class="check-icon">✅</span> Mobile Friendly & Responsive</li>
+                        <li><span class="check-icon">✅</span> Backup & Keamanan Dasar</li>
+                        <li><span class="check-icon">✅</span> SEO Basic & Performance Optimized</li>
+                        <li><span class="check-icon">✅</span> Dokumentasi & Panduan Pengguna</li>
+                        <li><span class="check-icon">✅</span> Maintenance & Support 1 Bulan</li>
+                    </ul>
+                </div>
+                <button class="cta-button business-bg pulse-on-hover"
+                onclick="window.location.href='https://wa.me/62895709537878?text=Halo%20Pontify%2C%20Saya%20ingin%20pesan%20web%20aplikasi%20dengan%20Paket%20Standar%20dong%21'">
+                    Pesan Sekarang
+                </button>
+                <p class="slot-text">Buruan pesan, slot terbatas!</p>
+            </div>
+
+            <!-- Premium Web Aplikasi -->
+            <div class="pricing-card card-corporate float-on-hover">
+                <div class="card-header corporate-header-bg">
+                    <h2>Premium</h2>
+                    <p class="subtitle">Web Berbasis Aplikasi Premium</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">Rp.</span>
+                    <span class="amount corporate-color" data-target="10000000">10juta</span>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><span class="check-icon">✅</span> Dashboard Admin & User Lengkap</li>
+                        <li><span class="check-icon">✅</span> Registrasi & Login Multi-level (2FA, Social Login)</li>
+                        <li><span class="check-icon">✅</span> Manajemen Konten Dinamis & Media</li>
+                        <li><span class="check-icon">✅</span> Integrasi API Lengkap (Payment, Email, Chat, Analytics)</li>
+                        <li><span class="check-icon">✅</span> Notifikasi Otomatis & Email Trigger</li>
+                        <li><span class="check-icon">✅</span> Hak Akses Multi-Level & Role Management</li>
+                        <li><span class="check-icon">✅</span> Backup & Keamanan Data Premium (SSL, Enkripsi, Backup Otomatis)</li>
+                        <li><span class="check-icon">✅</span> Mobile Friendly & PWA Ready</li>
+                        <li><span class="check-icon">✅</span> SEO & Performance Optimization</li>
+                        <li><span class="check-icon">✅</span> Reporting & Analytics Dashboard</li>
+                        <li><span class="check-icon">✅</span> Dokumentasi & Video Panduan Lengkap</li>
+                        <li><span class="check-icon">✅</span> Maintenance & Support 3 Bulan</li>
+                        <li><span class="check-icon">✅</span> Fitur Revisi Tanpa Batas</li>
+                    </ul>
+                </div>
+                <button class="cta-button corporate-bg pulse-on-hover"
+                onclick="window.location.href='https://wa.me/62895709537878?text=Halo%20Pontify%2C%20Saya%20ingin%20pesan%20web%20aplikasi%20dengan%20Paket%20Premium%20dong%21'">
+                    Pesan Sekarang
+                </button>
+                <p class="slot-text">Buruan pesan, slot terbatas!</p>
+            </div>
+        </section>
+
+        <section class="pricing-grid inactive-grid" id="umkm-grid">
+            <div class="pricing-card card-umkm-ekonomis float-on-hover">
+                <div class="card-header umkm-ekonomis-header-bg">
+                    <h2>Basic</h2>
+                    <p class="subtitle">Paket lebih hemat</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">Rp.</span>
+                    <span class="amount umkm-ekonomis-color" data-target="800000">800k</span>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><span class="check-icon">✅</span> 1 Halaman</li>
+                        <li><span class="check-icon">✅</span> Copywriting</li>
+                        <li><span class="check-icon">✅</span> Desain Premium</li>
+                        <li><span class="check-icon">✅</span> Domain web.id/biz.id</li>
+                        <li><span class="check-icon">✅</span> Gratis Hosting</li>
+                        <li><span class="check-icon">✅</span> Mobile Friendly</li>
+                        <li><span class="check-icon">✅</span> SEO Friendly</li>
+                        <li><span class="check-icon">✅</span> Full Responsive</li>
+                        <li><span class="check-icon">✅</span> Free Maintenance</li>
+                        <li><span class="check-icon">✅</span> Revisi 2x</li>
+                    </ul>
+                </div>
+                <button class="cta-button umkm-ekonomis-bg pulse-on-hover"
+                onclick="window.location.href='https://wa.me/62895709537878?text=Halo%20Pontify%2C%20Saya%20ingin%20pesan%20website%20dengan%20Paket%20Basic%20dong%21'">
+                    Pesan Sekarang
+                </button>
+                <p class="slot-text">Buruan pesan, slot terbatas!</p>
+            </div>
+
+            <div class="pricing-card card-umkm-larismanis popular-umkm float-on-hover">
+                <div class="card-header umkm-larismanis-header-bg">
+                    <h2>Laris Manis</h2>
+                    <p class="subtitle">Terbaik untuk UMKM</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">Rp.</span>
+                    <span class="amount umkm-larismanis-color" data-target="1200000">1,2juta</span>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><span class="check-icon">✅</span> 1 Halaman</li>
+                        <li><span class="check-icon">✅</span> Copywriting</li>
+                        <li><span class="check-icon">✅</span> Desain Premium</li>
+                        <li><span class="check-icon">✅</span> Domain .com</li>
+                        <li><span class="check-icon">✅</span> Gratis Hosting</li>
+                        <li><span class="check-icon">✅</span> Mobile Friendly</li>
+                        <li><span class="check-icon">✅</span> SEO Friendly</li>
+                        <li><span class="check-icon">✅</span> Full Responsive</li>
+                        <li><span class="check-icon">✅</span> Free Maintenance</li>
+                        <li><span class="check-icon">✅</span> Revisi 3x</li>
+                    </ul>
+                </div>
+                <button class="cta-button umkm-larismanis-bg pulse-on-hover"
+                onclick="window.location.href='https://wa.me/62895709537878?text=Halo%20Pontify%2C%20Saya%20ingin%20pesan%20website%20dengan%20Paket%20Laris%20Manis%20dong%21'">
+                    Pesan Sekarang
+                </button>
+                <p class="slot-text">Buruan pesan, slot terbatas!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/pricing.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

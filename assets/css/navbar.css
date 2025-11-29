@@ -1,0 +1,238 @@
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: var(--shadow-light);
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-logo .navbar-logo-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.navbar .navbar-center ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .navbar-center ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar .navbar-center ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-out;
+}
+
+.navbar .navbar-center ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar .navbar-center ul li a.active::after {
+    width: 100%;
+}
+
+.navbar .navbar-center ul li a:hover {
+    color: var(--primary-color);
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn--contact {
+    background-color: var(--text-dark);
+    color: #fff;
+    box-shadow: var(--shadow-light);
+}
+
+.btn--contact:hover {
+    background-color: #4a5d73;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RESPONSIVENESS STYLES --- */
+
+/* Hide the mobile-only contact button by default */
+.navbar .mobile-only {
+    display: none;
+}
+
+/* Hide the desktop-only contact button and menu toggler on large screens */
+.navbar .desktop-only {
+    display: inline-block; /* Show on desktop */
+}
+.navbar .navbar-toggler {
+    display: none; /* Hide on desktop */
+}
+
+/* Toggler Button Styles */
+.navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    z-index: 1001; /* Above the mobile menu */
+}
+
+.navbar-toggler .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-dark); /* Use your theme color */
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Media Query for Mobile/Tablet Screens (e.g., max-width 992px) */
+@media (max-width: 992px) {
+    /* Main navigation container becomes full-width, full-height, and hidden */
+    .navbar .navbar-center {
+        position: fixed;
+        top: 80px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px); /* Fill remaining viewport */
+        background-color: #ffffff; /* Same as navbar background */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%); /* Hide off-screen to the right */
+        transition: transform 0.4s ease-in-out;
+        padding: 20px 0;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto; /* Allow scrolling if content is too tall */
+    }
+
+    /* When the menu is active, slide it into view */
+    .navbar .navbar-center.active {
+        transform: translateX(0); /* Slide into view */
+    }
+
+    /* Toggler is shown */
+    .navbar .navbar-toggler {
+        display: flex;
+        margin-left: 20px; /* Space between contact button (if shown) and toggler */
+    }
+
+    /* Desktop contact button is hidden */
+    .navbar .desktop-only {
+        display: none;
+    }
+
+    /* Mobile-only contact button is shown */
+    .navbar .mobile-only {
+        display: inline-block;
+        margin-top: 30px;
+    }
+    
+    /* Navigation list styles for mobile */
+    .navbar .navbar-center ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0; /* Remove gap for cleaner vertical list */
+        width: 100%;
+    }
+
+    /* Individual link styles for mobile */
+    .navbar .navbar-center ul li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0; /* Optional separator */
+    }
+
+    .navbar .navbar-center ul li:first-child {
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .navbar .navbar-center ul li a {
+        padding: 15px 20px;
+        display: block; /* Make links fill the list item width */
+        font-size: 1.1rem;
+        color: var(--text-dark); /* Use a darker color for contrast */
+    }
+
+    /* Remove the underline effect on mobile for cleaner look */
+    .navbar .navbar-center ul li a::after {
+        display: none;
+    }
+
+    /* Toggler is shown (already in the previous code, but confirming) */
+    .navbar .navbar-toggler {
+        display: flex;
+        /* Ensure it's not hidden by other elements */
+        z-index: 1001; 
+    }
+
+    /* --- Hamburger Animation CSS (New Code) --- */
+    
+    /* When the toggler has the 'open' class, transform the bars */
+    .navbar-toggler.open .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+    
+    .navbar-toggler.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar-toggler.open .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+}

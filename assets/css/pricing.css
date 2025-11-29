@@ -1,0 +1,287 @@
+/* --- COLOR PALETTE --- */
+/* Company Profile Colors (from previous answer) */
+.starter-color { 
+    color: #ff6600; 
+}
+
+.business-color { 
+    color: #5cb85c; 
+}
+
+.corporate-color { 
+    color: #d9534f; 
+}
+
+.starter-header-bg, .starter-bg { 
+    background-color: #ff6600; 
+    color: white; 
+}
+
+.business-header-bg, .business-bg { 
+    background-color: #5cb85c; 
+    color: white; 
+}
+
+.corporate-header-bg, .corporate-bg { 
+    background-color: #d9534f; 
+    color: white; 
+}
+
+/* UMKM Colors (from your new image) */
+.umkm-ekonomis-color { 
+    color: #dc3545; 
+} 
+
+.umkm-larismanis-color { 
+    color: #ff6600; 
+} /* Bright Orange */
+
+.umkm-ekonomis-header-bg, .umkm-ekonomis-bg { 
+    background-color: #dc3545; 
+    color: white; 
+}
+
+.umkm-larismanis-header-bg, .umkm-larismanis-bg { 
+    background-color: #ff6600; 
+    color: white; 
+}
+
+/* --- ANIMATIONS (Kept from previous answer) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 102, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0); }
+}
+
+.pulse-on-hover:hover { 
+    animation: pulse 1.5s infinite; 
+}
+
+.float-on-hover:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in-up { 
+    animation: fadeInUp 0.8s ease-out both; 
+}
+
+.delay-200 { 
+    animation-delay: 0.2s; 
+}
+
+.delay-400 { 
+    animation-delay: 0.4s; 
+}
+
+.delay-600 { 
+    animation-delay: 0.6s; 
+}
+
+/* --- PRICING HERO & PROMO --- */
+.pricing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-hero { 
+    text-align: center; 
+    align-items: center;
+    background-color: var(--bg-light);
+    padding: 130px 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.pricing-hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+}
+
+.pricing-hero p { 
+    font-size: 1rem; 
+    max-width: 600px; 
+    margin: 0 auto 30px; 
+}
+
+/* --- SEGMENTED SWITCH STYLING --- */
+.package-selector-container {
+    display: inline-flex;
+    background-color: #e0e0e0; /* Light gray background for the container/track */
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.selector-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #555; /* Inactive text color */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition */
+}
+
+.selector-btn.active {
+    background-color: white; /* White background for the active tab */
+    color: #1a1a1a; /* Darker text color for active tab */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle 3D lift */
+}
+
+/* --- PRICING GRIDS (Toggle Handled by JS) --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+    /* Hide/Show logic */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.pricing-grid.active-grid {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+/* --- PRICING CARD BASE STYLING --- */
+.pricing-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-header {
+    padding: 20px 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-bottom: 30px;
+}
+.card-header h2 { 
+    font-size: 1.8rem; 
+    margin: 0; color: white; 
+}
+
+.card-header .subtitle { 
+    font-size: 0.9rem; 
+    font-weight: 400; 
+    margin: 5px 0 0; 
+}
+
+/* Company Best Value Tag */
+.popular .tag {
+    position: absolute;
+    top: 15px; /* Move it down from the top edge */
+    right: -30px; /* Adjust to keep the rotated element inside the boundary */
+    background-color: #f14455;
+    color: white;
+    padding: 5px 30px; /* Slightly more padding for better look */
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; 
+}
+
+/* Price Display */
+.card-price {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.card-price .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.card-price .amount {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Features, CTA, and Slot Text (Consistent styling) */
+.card-features { 
+    flex-grow: 1; 
+    padding: 20px 30px; 
+}
+
+.card-features ul { 
+    list-style: none; 
+    padding: 0; margin: 0; 
+}
+
+.card-features li { 
+    padding: 8px 0; 
+    font-size: 0.95rem; 
+    color: #444; 
+    display: flex; 
+    align-items: center; 
+}
+
+.card-features .check-icon { 
+    font-size: 1.1rem; 
+    margin-right: 10px; 
+    line-height: 1; 
+}
+
+.cta-button {
+    width: calc(100% - 60px);
+    margin: 0 30px 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slot-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    margin: 5px 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .popular { 
+        transform: none; 
+    }
+    .pricing-grid { 
+        gap: 30px; 
+        width: 80%;
+        margin: 0 auto;
+    }
+}

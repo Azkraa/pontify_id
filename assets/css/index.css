@@ -1,0 +1,439 @@
+.btn--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: var(--shadow-light);
+}
+
+.btn--primary:hover {
+    background-color: #4747d6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn--secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-light);
+}
+
+.section-placeholder {
+    padding: 100px 5%;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-placeholder h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-placeholder h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-placeholder p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    color: var(--text-light);
+}
+
+.index .hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background-color: var(--bg-light);
+    padding: 130px 5%;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.index .hero-content {
+    flex: 1;
+    max-width: 70%;
+    z-index: 1;
+    animation: fadeInSlideRight 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.index .hero h2 {
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.index .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+    color: var(--text-light);
+    max-width: 600px;
+    font-weight: 300;
+}
+
+.index .hero-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.index .hero-illustration {
+    flex: 1;
+    min-height: 450px; 
+    background-image: url('../image/image-home.png'); 
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    z-index: 0;
+    animation: fadeInSlideLeft 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+/* --- ABOUT US SECTION STYLES --- */
+#tentang { background-color: #ffffff; }
+
+.index .tentang-section { 
+    min-height: 90vh;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+    background: linear-gradient(180deg,#fff,#fbfbff); 
+}   
+
+.index .container { 
+    max-width:1400px; 
+    margin:0 auto; 
+    padding: 50px 5%;
+}
+
+.index .tentang-grid {
+    display: grid;
+    grid-template-columns: 1fr 650px;
+    gap: 100px;
+    align-items: center;
+}
+
+.index .tentang-content {
+    max-width: 750px; 
+    animation: fadeInSlideLeft 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.index .headline { 
+    font-size:28px; 
+    margin:0 0 8px; 
+    color:#111827; 
+}
+
+.index .subheadline { 
+    font-size:18px; 
+    margin:0 0 16px; 
+    color:#4b5563; 
+    font-weight:500; 
+}
+
+.index .lead { 
+    color:#374151; 
+    line-height:1.6; 
+    margin-bottom:18px; 
+    text-align: justify;
+}
+
+.index .tentang-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInSlideRight 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.index .about-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- LAYANAN SECTION STYLES --- */
+/* Styling Utama Bagian Layanan */
+.index .layanan-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--bg-light); /* Warna latar belakang */
+}
+
+.index .layanan-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.index .layanan-section p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Flex Container untuk Kartu */
+.index .layanan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Jarak antar kartu */
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+/* Gaya Kartu Individu */
+.index .layanan-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 350px; /* Lebar kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Transisi untuk efek hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover Animasi pada Kartu */
+.index .layanan-card:hover {
+    transform: translateY(-5px); /* Sedikit naik */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih gelap */
+}
+
+/* Header Kartu */
+.index .card-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.index .card-header .header-text-large {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+}
+
+.index .card-header .header-text-small {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #007bff; /* Warna biru untuk tema */
+    margin-top: 5px;
+}
+
+/* Container Gambar */
+.index .card-image-container {
+    padding: 10px;
+    background-color: #f4f4f4; /* Latar belakang abu-abu muda seperti di gambar */
+    margin: 0 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px; /* Tinggi tetap untuk gambar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index .card-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Transisi untuk efek hover pada gambar */
+    transition: transform 0.5s ease;
+}
+
+/* Efek Animasi pada Gambar saat Kartu di-hover */
+.index .layanan-card:hover .card-image {
+    transform: scale(1.05); /* Memperbesar gambar sedikit */
+}
+
+
+/* Area Aksi/Tombol */
+.index .card-actions {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Gaya Tombol */
+.index .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    /* Transisi untuk efek hover tombol */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.index .btn i {
+    margin-right: 8px;
+}
+
+/* Tombol Utama (Lihat Tampilan) */
+.index .btn-primary {
+    background-color: #007bff; /* Biru terang */
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+.index .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Tombol Sekunder (Pesan Website) */
+.index .btn-secondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.index .btn-secondary:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- Tablet & Smaller Desktop (max-width: 992px) --- */
+@media (max-width: 992px) {
+    /* --- General Layout Stacking (Hero and About) --- */
+    .index .hero,
+    .index .tentang-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Hero Section Adjustments */
+    .index .hero {
+        text-align: center;
+        padding-top: 150px;
+        min-height: unset;
+    }
+
+    .index .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .index .hero-buttons {
+        justify-content: center;
+        flex-direction: column; /* Start stacking buttons earlier */
+        gap: 15px;
+    }
+
+    .index .hero-illustration {
+        width: 100%;
+        height: 350px;
+        background-position: center center;
+        margin-top: 40px;
+    }
+    
+    .index .hero h2 {
+        font-size: 3rem; /* Increase heading size for better tablet impact */
+    }
+
+    /* About (Tentang) Section Adjustments */
+    .index .tentang-section {
+        min-height: unset;
+    }
+    
+    /* Animation Removal for stacked layouts to prevent layout shifts */
+    .index .hero-content,
+    .index .hero-illustration,
+    .index .tentang-content,
+    .index .tentang-visual {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    /* Layanan Cards Adjustment */
+    .index .layanan-cards {
+        gap: 20px;
+    }
+    .index .layanan-card {
+        width: 300px;
+    }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* General Padding and Spacing */
+    .index .hero {
+        padding-top: 150px;
+        padding-bottom: 10px;
+    }
+
+    .index .container { 
+        padding: 10px 5%;
+    }
+    
+    /* Hero Section Font Scaling */
+    .index .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .index .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-illustration {
+        display: none;
+    }
+    
+    /* Button Scaling */
+    .index .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* About (Tentang) Section Image Scaling */
+    .index .about-image {
+        max-width: 250px; 
+    }
+
+    /* Service Cards (Layanan) to single column */
+    .index .layanan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .index .layanan-card {
+        width: 90%; 
+        max-width: 400px;
+    }
+}
